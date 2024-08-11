@@ -7,12 +7,6 @@ import DashNav from './DashNav'
 import DashboardDivision from './DashboardDivision';
 
 const DashSide = () => {
-    const navigate = useNavigate()
-
-    //curent login user
-    const EmailUser = secureLocalStorage.getItem("Login1");
-    const RoleUser = secureLocalStorage.getItem("Login2");
-
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -20,11 +14,12 @@ const DashSide = () => {
     };
 
     const SideMenu = [
-        {id: 1, name: "Dashboard", link: 'Home', icon: <BsSpeedometer2 />},
-        {id: 2, name: "Divisions", link: 'Divisions', icon: <BsBuildingsFill />},   
-        {id: 3, name: "People", link: 'People', icon: <BsPeople />}, 
-        {id: 4, name: "Staff", link: 'Staff', icon: <BsPersonFillLock />}, 
-        {id: 5, name: "Settings", link: 'Settings', icon: <BsGearFill />},    
+        {id: 1, name: "Regional Council", link: 'Home', icon: <BsSpeedometer2 />},
+        {id: 2, name: "Division Dashboard", link: 'Home', icon: <BsSpeedometer2 />},        
+        {id: 3, name: "Divisions", link: 'Divisions', icon: <BsBuildingsFill />},   
+        {id: 4, name: "People", link: 'People', icon: <BsPeople />}, 
+        {id: 5, name: "Staff", link: 'Staff', icon: <BsPersonFillLock />}, 
+        {id: 6, name: "Settings", link: 'Settings', icon: <BsGearFill />},    
     ]
     
   return (
@@ -48,32 +43,14 @@ const DashSide = () => {
                 <div className="">
                     {
                         SideMenu.map((menu, index) => {
-                            if(RoleUser === "SuperAdmin"){
-                                return (
-                                    <a href={menu.link}>
-                                        <div className="duration-500 py-2 hover:bg-blue-200  my-2 pl-4 rounded text-blue-500" key={index}>
-                                            <div className="flex duration-500 hover:pl-2">
-                                                <div className="text-xl pr-2">{menu.icon}</div>
-                                                <p className="">{menu.name}</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                )
-                            }
-                            else if(RoleUser === "DivisionAdmin"){
-                                if(menu.id !== 2 && menu.id !== 4){
-                                    return (
-                                        <a href={menu.link}>
-                                            <div className="duration-500 py-2 hover:bg-blue-200  my-2 pl-4 rounded text-blue-500" key={index}>
-                                                <div className="flex duration-500 hover:pl-2">
-                                                    <div className="text-xl pr-2">{menu.icon}</div>
-                                                    <p className="">{menu.name}</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    )
-                                }
-                            }
+                            <a href={menu.link}>
+                                <div className="duration-500 py-2 hover:bg-blue-200  my-2 pl-4 rounded text-blue-500" key={index}>
+                                    <div className="flex duration-500 hover:pl-2">
+                                        <div className="text-xl pr-2">{menu.icon}</div>
+                                        <p className="">{menu.name}</p>
+                                    </div>
+                                </div>
+                            </a>
                         })
                     }
                 </div>
