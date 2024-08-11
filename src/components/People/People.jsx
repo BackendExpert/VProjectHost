@@ -21,50 +21,26 @@ const People = () => {
             <div className="md:grid grid-cols-3 gap-5">
                 {
                     PeopleData.map((people, index) => {
-                        if(RoleUser === "SuperAdmin"){
-                            if(people.id !== 3) {
-                                return (
-                                    <a href={people.link}>
-                                        <div className={`pl-4 py-6 rounded-xl shadow-md ${people.BgColor} text-white md:my-0 my-4`} key={index}>
-        
-        
-                                        <div className="">
-                                            <div className="">
-                                                {people.name}
-                                            </div>
-                                            <div className="flex justify-between mr-4">
-                                                <h1 className="text-2xl">{people.value}</h1>
-                                                <div className="-mt-2">{people.icon}</div>
-                                            </div>
-                                        </div>
-        
-        
-                                        </div>
-                                    </a>
-                                )
-                            }
-                        }
-                        if(RoleUser === "DivisionAdmin"){
-                            return (
-                                <a href={people.link}>
-                                    <div className={`pl-4 py-6 rounded-xl shadow-md ${people.BgColor} text-white md:my-0 my-4`} key={index}>
-    
-    
-                                    <div className="">
-                                        <div className="">
-                                            {people.name}
-                                        </div>
-                                        <div className="flex justify-between mr-4">
-                                            <h1 className="text-2xl">{people.value}</h1>
-                                            <div className="-mt-2">{people.icon}</div>
-                                        </div>
-                                    </div>
-    
-    
-                                    </div>
-                                </a>
-                            )
-                        }
+                        return (
+                            <a href={people.link}>
+                            <div className={`pl-4 py-6 rounded-xl shadow-md ${people.BgColor} text-white md:my-0 my-4`} key={index}>
+
+
+                            <div className="">
+                                <div className="">
+                                    {people.name}
+                                </div>
+                                <div className="flex justify-between mr-4">
+                                    <h1 className="text-2xl">{people.value}</h1>
+                                    <div className="-mt-2">{people.icon}</div>
+                                </div>
+                            </div>
+
+
+                            </div>
+                        </a>
+                    )
+                        
                     })
                 }
             </div>

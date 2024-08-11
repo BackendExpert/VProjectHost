@@ -71,6 +71,7 @@ const SignIn = () => {
                             </div>
                         </form>
                         <Link><p className="my-2 md:mx-8 text-blue-500 font-semibold">Forget Password ? </p></Link>
+                        <Link to={'Dashboard/RCHome'}><p className="my-2 md:mx-8 text-blue-500 font-semibold">Dashboard </p></Link>
                     </div>
                 </div>
             </div>
