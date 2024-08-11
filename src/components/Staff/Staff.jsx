@@ -37,21 +37,33 @@ const Staff = () => {
                             <div class="flex items-center">Staff Info</div>
                         </div>
                     </div>
-                    {
-                        AllStaff.map((staff, index) => {
-                            return (
-                                <div key={index} class="md:grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
-                                    <div class="text-gray-500 dark:text-gray-400">{staff.name}</div>
-                                    <div class="text-gray-500 dark:text-gray-400">{staff.email}</div>
-                                    <div class="text-gray-500 dark:text-gray-400">{staff.Position}</div>
-                                    <div class="text-gray-500 dark:text-gray-400">{staff.ControlArea}</div>
+                                <div class="md:grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
                                     <div class="text-gray-500 dark:text-gray-400">   
                                         <p className="text-blue-500 text-sm font-semibold">Edit User</p>                       
                                     </div>
                                 </div>
-                            )
-                        })
-                    }
+                                <div class="md:grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">   
+                                        <p className="text-blue-500 text-sm font-semibold">Edit User</p>                       
+                                    </div>
+                                </div>
+                                <div class="md:grid grid-cols-5 px-4 py-5 text-sm text-gray-700 border-b border-gray-200 gap-x-16 dark:border-gray-700">
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">Testing</div>
+                                    <div class="text-gray-500 dark:text-gray-400">   
+                                        <p className="text-blue-500 text-sm font-semibold">Edit User</p>                       
+                                    </div>
+                                </div>
                 </div>
             </div>
 

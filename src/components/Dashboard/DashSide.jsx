@@ -14,8 +14,8 @@ const DashSide = () => {
     };
 
     const SideMenu = [
-        {id: 1, name: "Regional Council", link: 'Home', icon: <BsSpeedometer2 />},
-        {id: 2, name: "Division Dashboard", link: 'Home', icon: <BsSpeedometer2 />},        
+        {id: 1, name: "Regional Council", link: 'RCHome', icon: <BsSpeedometer2 />},
+        {id: 2, name: "Division Dashboard", link: 'DivisionHome', icon: <BsSpeedometer2 />},        
         {id: 3, name: "Divisions", link: 'Divisions', icon: <BsBuildingsFill />},   
         {id: 4, name: "People", link: 'People', icon: <BsPeople />}, 
         {id: 5, name: "Staff", link: 'Staff', icon: <BsPersonFillLock />}, 
@@ -43,14 +43,16 @@ const DashSide = () => {
                 <div className="">
                     {
                         SideMenu.map((menu, index) => {
-                            <a href={menu.link}>
-                                <div className="duration-500 py-2 hover:bg-blue-200  my-2 pl-4 rounded text-blue-500" key={index}>
-                                    <div className="flex duration-500 hover:pl-2">
-                                        <div className="text-xl pr-2">{menu.icon}</div>
-                                        <p className="">{menu.name}</p>
+                            return (
+                                <a href={menu.link}>
+                                    <div className="duration-500 py-2 hover:bg-blue-200  my-2 pl-4 rounded text-blue-500" key={index}>
+                                        <div className="flex duration-500 hover:pl-2">
+                                            <div className="text-xl pr-2">{menu.icon}</div>
+                                            <p className="">{menu.name}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            )
                         })
                     }
                 </div>
